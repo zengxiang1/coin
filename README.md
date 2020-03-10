@@ -18,9 +18,11 @@ def btc():
         #btc节点域名
         "host" : "127.0.0.1",
         #btc归总最少金额()
-        "minbtc": 0
+        "minbtc": 0,
         #手续费地址
-        "fee_sender": "1BtjjiHe7bFor3z1fp1rYSr993eUZtSSbu"
+        "fee_sender": "1BtjjiHe7bFor3z1fp1rYSr993eUZtSSbu",
+        #钱包密码
+        "wallet_password":"wallet_password"
     }
 ```
 3. 安装依赖
@@ -43,6 +45,7 @@ omnicore-cli -datadir =<你的omnicore datadir> getnewaddress
 python main.py -c usdt -p send
 ```
 如果报500 错误  则是手续费不足
+
 
 
 btc
