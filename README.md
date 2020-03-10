@@ -8,7 +8,7 @@
 def btc():
     return {
         # btc节点url
-        "url": "http://ip:port:",
+        "url": "http://127.0.0.1:8332:",
         # btc节点用户名
         "user": "admin",
         #btc节点密码
@@ -16,7 +16,7 @@ def btc():
         #btc归总地址
         "total": "1BtjjiHe7bFor3z1fp1rYSr993eUZtSSbu",
         #btc节点域名
-        "host" : "admin",
+        "host" : "127.0.0.1",
         #btc归总最少金额()
         "minbtc": 0
     }
