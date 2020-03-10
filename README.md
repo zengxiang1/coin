@@ -19,6 +19,8 @@ def btc():
         "host" : "127.0.0.1",
         #btc归总最少金额()
         "minbtc": 0
+        #手续费地址
+        "fee_sender": "1BtjjiHe7bFor3z1fp1rYSr993eUZtSSbu"
     }
 ```
 3. 安装依赖
