@@ -28,10 +28,8 @@ def btc():
 
 
 #### 配置代理
-1.在 site-packages/pyjsonrpc/http.py的第25行增加如下
-注意替换ip 和端口
 
-2.然后在config文件中配置
+1.然后在config文件中配置
 注意替换ip 和端口
 ```
 def common():
