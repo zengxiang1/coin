@@ -30,13 +30,6 @@ def btc():
 #### 配置代理
 1.在 site-packages/pyjsonrpc/http.py的第25行增加如下
 注意替换ip 和端口
-```
-import socks
-import socket
-socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 1081)
-socket.socket = socks.socksocket
-import urllib2
-```
 
 2.然后在config文件中配置
 注意替换ip 和端口
@@ -47,9 +40,13 @@ def common():
             "port": 1081
         }
     }
-
-
-3. 安装依赖
+如果不想要代理
+就保留如下
+def common():
+    return {
+        
+    }
+#### 3. 安装依赖
 ```
 pip install -r requirement.txt
 ```
