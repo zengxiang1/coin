@@ -33,6 +33,7 @@ def btc():
 
 2.然后在config文件中配置
 注意替换ip 和端口
+```
 def common():
     return {
         "proxy": {
@@ -40,12 +41,15 @@ def common():
             "port": 1081
         }
     }
+```
 如果不想要代理
 就保留如下
+```
 def common():
     return {
         
     }
+```
 #### 3. 安装依赖
 ```
 pip install -r requirement.txt
