@@ -71,6 +71,7 @@ python main.py -c usdt -p send
 
 
 
+
 btc
 1.获取地址余额列表
 ```
@@ -80,3 +81,24 @@ python main.py -c btc -p list
 ```
 python main.py -c btc -p send
 ```
+
+归总配置
+wallet/btc.py 第98行 默认
+```
+
+tx_hex = self.client.createrawtransaction(inputs, outputs)
+# version < 0.7.0
+signed_hex = self.client.signrawtransaction(tx_hex)['hex']
+# version >= 0.7.0
+# signed_hex = self.client.signrawtransactionwithwallet(tx_hex)['hex']
+```
+
+如果这样提示 method not found 就改成如下
+tx_hex = self.client.createrawtransaction(inputs, outputs)
+# version < 0.7.0
+#signed_hex = self.client.signrawtransaction(tx_hex)['hex']
+# version >= 0.7.0
+signed_hex = self.client.signrawtransactionwithwallet(tx_hex)['hex']
+
+1.获取地址余额列表接口
+1.获取地址余额列表
