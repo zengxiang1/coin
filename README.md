@@ -22,7 +22,11 @@ def btc():
         #手续费地址
         "fee_sender": "1BtjjiHe7bFor3z1fp1rYSr993eUZtSSbu",
         #钱包密码
-        "wallet_password":"wallet_password"
+        "wallet_password":"wallet_password",
+        #最少usdt归总
+        "minusdt": 10,
+        # 自定义手续费设置 默认50     如果从网上自动获取直接删掉 ， 如果自定义不知道填多少可以从imtoken上获取（转账的下面有乌龟和兔子中间那个数）
+        "fee_rate": 50
     }
 ```
 
