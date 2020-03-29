@@ -109,3 +109,28 @@ signed_hex = self.client.signrawtransactionwithwallet(tx_hex)['hex']
 
 1.获取地址余额列表接口
 1.获取地址余额列表
+
+
+
+eth 
+首先 在启动参数加上 --allow-insecure-unlock
+然后配置密码 
+```
+def eth():
+    return {
+        #rpc链接
+        "url": "http://13.229.231.180:8546",
+                #rpc用户名
+        "user": "sey",
+                #rpc密码
+        "password": "123456",
+                #rpc钱包密码
+        "wallet_password": "123456",
+                #最小额度
+        "min": "0.0001",
+                #归总地址
+        "total": "0xD3D66b1f124a2C36647762A4b89F280F19dFe3D3",
+                #gas price https://etherscan.io/gastracker 默认15是安全gas范围
+        "gasPrice": 15
+    }
+```
