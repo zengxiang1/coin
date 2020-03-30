@@ -119,11 +119,11 @@ eth
 def eth():
     return {
         #rpc链接
-        "url": "http://13.229.231.180:8546",
+        "url": "http://ip:port",
                 #rpc用户名
-        "user": "sey",
+        "user": "123",
                 #rpc密码
-        "password": "123456",
+        "password": "123",
                 #rpc钱包密码
         "wallet_password": "123456",
                 #最小额度
