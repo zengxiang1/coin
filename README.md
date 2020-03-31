@@ -134,3 +134,43 @@ def eth():
         "gasPrice": 15
     }
 ```
+
+erc20
+
+配置
+出于方便erc20的地址默认归总到eth配置到总地址上面
+
+```
+def erc20():
+    return {
+        #   代币地址 默认为usdt地址
+        "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        #   代币的decimal 从etherscan可以获取。usdt是6
+        "decimal": 6,
+        #   最小代币金额
+        "min": 0.0001,
+        #   手续费地址 手续费地址
+        "feeAddress": "0x3490e84c3783ad13e86f25c3ec64af8e1c68b74a"
+    }
+```
+流程 
+1.列出erc20代币地址以及数量
+```
+python main.py -c erc20 -p list
+```
+可以查看每个地址代币情况以及总共多少代币
+2.给其中一个地址打手续费，然后记住这个地址 , 将这个地址填入 上述配置中的 feeAddress (可以多打点， 大概0.5个左右 打完手续费之后用eth归总命令执行归总) 然后执行
+```
+python main.py -c erc20 -p fee
+```
+
+3.去https://etherscan.io/address/(feeAddress)feeAddress替换上述中的手续费地址， 查看是否所有手续费已经到账  如果都已经到账， 请执行如下命令
+```
+python main.py -c erc20 -p send
+```
+请等待代币到账.....
+到账后请继续执行eth归总命令回收手续费
+
+
+
+
