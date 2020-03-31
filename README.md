@@ -107,12 +107,11 @@ signed_hex = self.client.signrawtransactionwithwallet(tx_hex)['hex']
 
 ```
 
-1.获取地址余额列表接口
-1.获取地址余额列表
 
 
 
-eth 
+
+#### eth 
 首先 在启动参数加上 --allow-insecure-unlock
 然后配置密码 
 ```
@@ -134,8 +133,16 @@ def eth():
         "gasPrice": 15
     }
 ```
+1.查询余额
+```
+python main.py -c eth -p list
+```
+2. 归总（切记不要弄错归总地址， 请再三检查）
+```
+python main -c eth -p send
+```
 
-erc20
+#### erc20
 
 配置
 出于方便erc20的地址默认归总到eth配置到总地址上面
