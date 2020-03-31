@@ -171,7 +171,7 @@ python main.py -c erc20 -p list
 python main.py -c erc20 -p fee
 ```
 
-3.去https://etherscan.io/address/(feeAddress)feeAddress替换上述中的手续费地址， 查看是否所有手续费已经到账  如果都已经到账， 请执行如下命令
+3.去https://etherscan.io/address/(feeAddress)  feeAddress替换上述中的手续费地址， 查看是否所有手续费已经到账(没有pending的交易)  如果都已经到账， 请执行如下命令
 ```
 python main.py -c erc20 -p send
 ```
